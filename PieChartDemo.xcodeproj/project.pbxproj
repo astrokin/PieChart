@@ -17,7 +17,6 @@
 		C033539517CD0198000FED96 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C033539417CD0198000FED96 /* Default@2x.png */; };
 		C033539717CD0198000FED96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C033539617CD0198000FED96 /* Default-568h@2x.png */; };
 		C033539A17CD0198000FED96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C033539917CD0198000FED96 /* ViewController.m */; };
-		C033539D17CD0198000FED96 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C033539B17CD0198000FED96 /* ViewController.xib */; };
 		C03353A517CD021C000FED96 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C03353A417CD021C000FED96 /* PieChartView.m */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		C033539617CD0198000FED96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C033539817CD0198000FED96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C033539917CD0198000FED96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C033539C17CD0198000FED96 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		C03353A317CD021C000FED96 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
 		C03353A417CD021C000FED96 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +90,6 @@
 				C033539917CD0198000FED96 /* ViewController.m */,
 				C03353A317CD021C000FED96 /* PieChartView.h */,
 				C03353A417CD021C000FED96 /* PieChartView.m */,
-				C033539B17CD0198000FED96 /* ViewController.xib */,
 				C033538717CD0198000FED96 /* Supporting Files */,
 			);
 			path = PieChartDemo;
@@ -167,7 +164,6 @@
 				C033539317CD0198000FED96 /* Default.png in Resources */,
 				C033539517CD0198000FED96 /* Default@2x.png in Resources */,
 				C033539717CD0198000FED96 /* Default-568h@2x.png in Resources */,
-				C033539D17CD0198000FED96 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,14 +190,6 @@
 				C033538A17CD0198000FED96 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C033539B17CD0198000FED96 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C033539C17CD0198000FED96 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -302,6 +290,7 @@
 				C03353A217CD0198000FED96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -46,19 +46,25 @@ static const NSInteger tValueLabelTag = 77;
 
 @implementation ViewController
 
-- (void)viewDidLoad
+-(void)loadView
 {
-   [super viewDidLoad];
-	pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
+    CGFloat h =  [UIApplication sharedApplication].statusBarHidden ? 0 :
+      [UIApplication sharedApplication].statusBarFrame.size.height;
+   UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0,
+      [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - h)];
+   view.backgroundColor = [UIColor lightGrayColor];
+   
+   pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
    pieChartView.delegate = self;
    pieChartView.datasource = self;
-   [self.view addSubview:pieChartView];
+   [view addSubview:pieChartView];
+   [pieChartView release];
    
    holeLabel = [self labelWithFrame:kHoleLabelFrame];
-   [self.view addSubview:holeLabel];
+   [view addSubview:holeLabel];
    
    valueLabel = [self labelWithFrame:kValueLabelFrame];
-   [self.view addSubview:valueLabel];
+   [view addSubview:valueLabel];
    
    holeSlider = [[UISlider alloc] initWithFrame:kHoleSliderFrame];
    holeSlider.tag = tHoleLabelTag;
@@ -68,8 +74,8 @@ static const NSInteger tValueLabelTag = 77;
    holeSlider.maximumValue = dia/2 - 1;
    int max = holeSlider.maximumValue;
    holeSlider.value = arc4random() % max;
-   [self.view addSubview:holeSlider];
-   [self didChangeValueForSlider:holeSlider];
+   [view addSubview:holeSlider];
+   [holeSlider release];
    
    slicesSlider = [[UISlider alloc] initWithFrame:kSlicesSliderFrame];
    slicesSlider.tag = tValueLabelTag;
@@ -78,9 +84,18 @@ static const NSInteger tValueLabelTag = 77;
    slicesSlider.minimumValue = 0.0f;
    slicesSlider.maximumValue = 100.0f;
    slicesSlider.value = arc4random() % 100;
-   [self.view addSubview:slicesSlider];
-   [self didChangeValueForSlider:slicesSlider];
+   [view addSubview:slicesSlider];
+   [slicesSlider release];
    
+   self.view = view;
+   [view release];
+}
+
+- (void)viewDidLoad
+{
+   [super viewDidLoad];
+   [self didChangeValueForSlider:holeSlider];
+   [self didChangeValueForSlider:slicesSlider];
    [pieChartView reloadData];
 }
 
@@ -99,7 +114,6 @@ static const NSInteger tValueLabelTag = 77;
 - (void)didReceiveMemoryWarning
 {
    [super didReceiveMemoryWarning];
-   pieChartView = nil;
 }
 
 -(void)didChangeValueForSlider:(UISlider*)slider

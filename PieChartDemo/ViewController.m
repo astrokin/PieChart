@@ -48,7 +48,7 @@ static const NSInteger tValueLabelTag = 77;
 
 -(void)loadView
 {
-    CGFloat h =  [UIApplication sharedApplication].statusBarHidden ? 0 :
+   CGFloat h =  [UIApplication sharedApplication].statusBarHidden ? 0 :
       [UIApplication sharedApplication].statusBarFrame.size.height;
    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0,
       [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - h)];

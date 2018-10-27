@@ -1,0 +1,16 @@
+PODS:
+  - JustPieChart (0.1.0)
+
+DEPENDENCIES:
+  - JustPieChart (from `../../`)
+
+EXTERNAL SOURCES:
+  JustPieChart:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  JustPieChart: 1c0bde80f32e0d4ddf562d16b74a9c529ec73c18
+
+PODFILE CHECKSUM: a61f91b9e2c6aee6842bbb49c6c63f4cecfabc6d
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JustPieChart_Example' do
+  pod 'JustPieChart', :path => '../../'
+
+  target 'JustPieChart_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="JPCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOT-ou-Z0O" customClass="PieChartView">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8f2-dJ-vBd"/>
+                                    <constraint firstAttribute="height" constant="250" id="FM3-Oy-ng6"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-6z-Pmu">
+                                <rect key="frame" x="94" y="508.5" width="229" height="31"/>
+                                <connections>
+                                    <action selector="didChangeValueForSlider:" destination="whP-gf-Uak" eventType="valueChanged" id="h0p-lA-Jaz"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-Ka-ECn">
+                                <rect key="frame" x="94" y="597" width="229" height="31"/>
+                                <connections>
+                                    <action selector="didChangeValueForSlider:" destination="whP-gf-Uak" eventType="valueChanged" id="W8p-XJ-Gk8"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcM-yp-NRg">
+                                <rect key="frame" x="0.0" y="513" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-z3-glg">
+                                <rect key="frame" x="0.0" y="601.5" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Xh-Ka-ECn" firstAttribute="trailing" secondItem="K4v-6z-Pmu" secondAttribute="trailing" id="9Vn-RP-gFS"/>
+                            <constraint firstItem="YOT-ou-Z0O" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="9h4-Kg-hCh"/>
+                            <constraint firstItem="K4v-6z-Pmu" firstAttribute="leading" secondItem="pcM-yp-NRg" secondAttribute="trailing" constant="8" symbolic="YES" id="JVH-dZ-UW4"/>
+                            <constraint firstItem="K4v-6z-Pmu" firstAttribute="top" secondItem="YOT-ou-Z0O" secondAttribute="bottom" constant="50" id="NQX-cY-tlS"/>
+                            <constraint firstItem="7Xh-Ka-ECn" firstAttribute="top" secondItem="K4v-6z-Pmu" secondAttribute="bottom" constant="58.5" id="Pnq-li-WJ0"/>
+                            <constraint firstItem="7Xh-Ka-ECn" firstAttribute="leading" secondItem="boJ-z3-glg" secondAttribute="trailing" constant="8" id="XVH-GT-nGp"/>
+                            <constraint firstAttribute="trailing" secondItem="K4v-6z-Pmu" secondAttribute="trailing" constant="54" id="Xx5-yf-AFv"/>
+                            <constraint firstItem="K4v-6z-Pmu" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="width" multiplier="0.6" id="bdF-R9-LPx"/>
+                            <constraint firstItem="pcM-yp-NRg" firstAttribute="centerY" secondItem="K4v-6z-Pmu" secondAttribute="centerY" id="eKm-Xh-k9J"/>
+                            <constraint firstItem="boJ-z3-glg" firstAttribute="centerY" secondItem="7Xh-Ka-ECn" secondAttribute="centerY" id="jv9-fs-r58"/>
+                            <constraint firstItem="YOT-ou-Z0O" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="kzV-wf-bWJ"/>
+                            <constraint firstItem="7Xh-Ka-ECn" firstAttribute="width" secondItem="K4v-6z-Pmu" secondAttribute="width" id="qEq-jf-c2s"/>
+                            <constraint firstItem="boJ-z3-glg" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" priority="999" id="vWb-VU-gnu"/>
+                            <constraint firstItem="pcM-yp-NRg" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" priority="999" id="z0k-AE-oPd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holeLabel" destination="pcM-yp-NRg" id="drA-lX-IKG"/>
+                        <outlet property="holeSlider" destination="K4v-6z-Pmu" id="0p0-1P-RTC"/>
+                        <outlet property="pieChartSizeConstraint" destination="8f2-dJ-vBd" id="4wK-7L-isW"/>
+                        <outlet property="pieChartView" destination="YOT-ou-Z0O" id="Mbo-ij-2sO"/>
+                        <outlet property="slicesSlider" destination="7Xh-Ka-ECn" id="1sh-ya-6XA"/>
+                        <outlet property="valueLabel" destination="boJ-z3-glg" id="qcg-Ns-wqz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="433"/>
+        </scene>
+    </scenes>
+</document>

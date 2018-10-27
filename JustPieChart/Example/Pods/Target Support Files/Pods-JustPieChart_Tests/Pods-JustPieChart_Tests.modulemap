@@ -1,0 +1,6 @@
+framework module Pods_JustPieChart_Tests {
+  umbrella header "Pods-JustPieChart_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

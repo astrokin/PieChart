@@ -1,10 +1,29 @@
-PieChart
-========
+# JustPieChart
 
-Simple and elegant pie chart for iOS applications
+[![CI Status](https://img.shields.io/travis/Alexey Strokin/JustPieChart.svg?style=flat)](https://travis-ci.org/Alexey Strokin/JustPieChart)
+[![Version](https://img.shields.io/cocoapods/v/JustPieChart.svg?style=flat)](https://cocoapods.org/pods/JustPieChart)
+[![License](https://img.shields.io/cocoapods/l/JustPieChart.svg?style=flat)](https://cocoapods.org/pods/JustPieChart)
+[![Platform](https://img.shields.io/cocoapods/p/JustPieChart.svg?style=flat)](https://cocoapods.org/pods/JustPieChart)
 
-If you need any additional functionality please contact me.
+## Example
 
-If you have any questions don't hesitate to contact me.
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Have a nice day! =)
+## Requirements
+
+## Installation
+
+JustPieChart is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'JustPieChart'
+```
+
+## Author
+
+Alexey Strokin, alex.strok@gmail.com
+
+## License
+
+JustPieChart is available under the MIT license. See the LICENSE file for more info.

@@ -1,0 +1,6 @@
+framework module JustPieChart {
+  umbrella header "JustPieChart-umbrella.h"
+
+  export *
+  module * { export * }
+}
